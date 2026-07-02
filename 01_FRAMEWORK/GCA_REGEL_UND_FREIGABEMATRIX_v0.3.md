@@ -162,3 +162,15 @@ Die Matrix bedeutet fuer spaetere GCA-Logik:
 ## 11. Kurzfazit
 
 Diese Matrix macht aus der vagen Idee "Denken autonom, Handeln kontrolliert" einen praktischen Steuermechanismus. Genau das wird gebraucht, damit die heutigen `teilweise`-Faelle spaeter systematisch Richtung `funktioniert` wandern koennen.
+
+---
+
+## 12. Weiterentwicklung in v0.4
+
+Fuer feinere Fallbearbeitung wird diese Matrix durch das getrennte Klassenmodell in `GCA_KLASSENMODELL_v0.4.md` erweitert:
+
+- `Regelklasse` fuer Bindung an Regeln, Schutzgrenzen und Compliance
+- `Betriebsklasse` fuer die reale Eingriffstiefe
+- `Berechtigungsstufe` fuer Freigabe und Ausfuehrungsrecht
+
+Diese Trennung wird vor allem fuer Backup, Kubernetes, Netzwerk und zentrales Storage benoetigt.

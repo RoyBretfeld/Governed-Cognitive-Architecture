@@ -13,6 +13,7 @@ Wichtige Dateien:
 00_MASTER/GEDANKENSPIEL_FRAMEWORK_v0.1.md
 01_FRAMEWORK/GCA_FRAMEWORK_v0.2.md
 01_FRAMEWORK/GCA_REGEL_UND_FREIGABEMATRIX_v0.3.md
+01_FRAMEWORK/GCA_KLASSENMODELL_v0.4.md
 01_FRAMEWORK/GCA_LOESUNGSKNOTEN_SCHEMA_v0.3.md
 01_FRAMEWORK/GCA_CHECKLISTEN_ABLEITUNG_v0.3.md
 02_REGISTRY_ERWEITERUNG/REGISTRY_ERWEITERUNG_FRAMEWORKS_v0.1.md
@@ -46,6 +47,7 @@ Hinweise:
 - `GCA_REVIEW.md` ist die kritische Gutachterbewertung nach der Migration.
 - `01_FRAMEWORK/GCA_FRAMEWORK_v0.2.md` ist die operative Nachschaerfung nach der Erstsimulation.
 - `01_FRAMEWORK/GCA_REGEL_UND_FREIGABEMATRIX_v0.3.md` formalisiert Betriebsklassen, Freigabestufen und Bestaetigungsanforderungen.
+- `01_FRAMEWORK/GCA_KLASSENMODELL_v0.4.md` trennt Regelklasse, Betriebsklasse und Berechtigungsstufe fuer feinere Fallsteuerung.
 - `01_FRAMEWORK/GCA_LOESUNGSKNOTEN_SCHEMA_v0.3.md` definiert den formalen Aufbau eines wiederverwendbaren Loesungsknotens.
 - `01_FRAMEWORK/GCA_CHECKLISTEN_ABLEITUNG_v0.3.md` legt fest, welche Checklisten aus Problemtyp, Betriebsklasse und Risiko abgeleitet werden.
 - `03_SIMULATION_UND_VALIDIERUNG/SIMULATION_AUSWERTUNG_v0.2.md` dokumentiert die drei virtuellen Testlaeufe mit Ergebnis und Restluecken.

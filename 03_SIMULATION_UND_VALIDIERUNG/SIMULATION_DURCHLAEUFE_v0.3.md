@@ -257,3 +257,25 @@ Wenn ihr die naechste Reifestufe erreichen wollt, wuerde ich nicht als Erstes ne
 1. ein formales Loesungsknoten-Schema
 2. eine Regel- und Freigabematrix
 3. standardisierte Evidenz- und Bestaetigungsfelder pro Falltyp
+
+---
+
+## Nachlauf mit Klassenmodell v0.4
+
+Die Erweiterung um `Regelklasse`, `Betriebsklasse` und `Berechtigungsstufe` verbessert die sieben Durchlaeufe nicht dadurch, dass ploetzlich mehr "geloest" wird, sondern dadurch, dass die Grenze zwischen tragfaehigem Vorschlag und sauberer Eskalation klarer wird.
+
+### Neue Kurzbewertung
+
+| Testfall | Bewertung mit v0.3 | Bewertung mit v0.4 | Begruendung |
+|---|---|---|---|
+| 01 Hitzestau / Rack-Luftstrom | funktioniert | funktioniert | bleibt ein sauberer B2/R1-Fall |
+| 02 RAM / Kapazitaetsgrenze | teilweise | funktioniert | durch B2 plus G2 und klare Machbarkeitspruefung jetzt sauber einordenbar |
+| 03 Backupfenster / Betriebsstoerung | teilweise | funktioniert | R2/B2-B3 trennt Vorschlag, Freigabe und Restore-Schutz besser |
+| 04 Provisioning / RAM und Storage | teilweise | funktioniert | gekoppelte Engpaesse werden ueber Klassen besser beherrschbar |
+| 05 Kubernetes / Pending und PVC | teilweise | teilweise | weiterhin guter, aber stark formalisierungsbeduerftiger B3/R2-R3-Fall |
+| 06 Netzwerk / Switch-Uplink und VLAN | funktioniert | funktioniert | profitiert von G3/N3, war aber vorher schon stark |
+| 07 NAS oder NetApp / Snapshot-Wachstum | teilweise | teilweise | durch R3/B3-B4 besser steuerbar, aber weiterhin ein harter Realitaetstest |
+
+### Persoenliche Neubewertung
+
+Das feinere Klassenmodell hilft spuerbar. Vor allem RAM, Backup und Provisioning profitieren, weil diese Faelle nicht an fehlender Denklogik scheitern, sondern an zu grober Freigabe- und Eingriffsbewertung. Kubernetes und zentrales Storage bleiben bewusst die schweren Faelle. Das ist aus meiner Sicht gut, weil das Modell dort ehrlich bleibt.

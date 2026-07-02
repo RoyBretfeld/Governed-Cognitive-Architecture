@@ -10,7 +10,7 @@ Das ist wichtig, damit Checklisten spaeter nicht zufaellig oder nur aus Erinneru
 
 ## 1. Grundregel
 
-> Checklisten sind keine freien Notizen. Sie sind abgeleitete Folgeartefakte aus Problemtyp, Betriebsklasse, Risiko, Evidenz und Bestaetigung.
+> Checklisten sind keine freien Notizen. Sie sind abgeleitete Folgeartefakte aus Problemtyp, Regelklasse, Betriebsklasse, Berechtigungsstufe, Risiko, Evidenz und Bestaetigung.
 
 ---
 
@@ -32,7 +32,9 @@ Das ist wichtig, damit Checklisten spaeter nicht zufaellig oder nur aus Erinneru
 ```text
 Loesungsknoten lesen
 -> Problemtyp erkennen
+-> Regelklasse lesen
 -> Betriebsklasse lesen
+-> Berechtigungsstufe lesen
 -> Risiko lesen
 -> offene Luecken lesen
 -> daraus Pflicht-Checklisten bestimmen
@@ -40,10 +42,10 @@ Loesungsknoten lesen
 
 Pflichtregeln:
 
-- P0 erzeugt meist nur Diagnose-Checkliste oder gar keine
-- P1 erzeugt Diagnose- plus Vorschlags- oder Freigabevorlage
-- P2 erzeugt Diagnose-, Umsetzungs-, Freigabe-, Bestaetigungs- und Protokoll-Checkliste
-- P3 erzeugt dieselben wie P2 plus erweiterte Rollback- und Praeventionspunkte
+- B0 erzeugt meist nur Diagnose-Checkliste oder gar keine
+- B1 erzeugt Diagnose- plus Vorschlags- oder Freigabevorlage
+- B2 erzeugt Diagnose-, Umsetzungs-, Freigabe-, Bestaetigungs- und Protokoll-Checkliste
+- B3 oder B4 erzeugen dieselben wie B2 plus erweiterte Rollback- und Praeventionspunkte
 
 ---
 
@@ -65,7 +67,9 @@ Pflichtregeln:
 
 ### Freigabe-Checkliste
 
+- Regelklasse bestaetigt
 - Betriebsklasse bestaetigt
+- Berechtigungsstufe geklaert
 - menschliche Freigabe eingeholt
 - Rollen benannt
 - Zeitfenster festgelegt
@@ -212,9 +216,9 @@ Praevention:
 
 ---
 
-## 6. Matrix aus Problemtyp und Betriebsklasse
+## 6. Matrix aus Problemtyp und Klassenlage
 
-| Problemtyp | P0/P1 erzeugt | P2 erzeugt zusaetzlich | P3 erzeugt zusaetzlich |
+| Problemtyp | B0/B1 erzeugt | B2 erzeugt zusaetzlich | B3/B4 erzeugen zusaetzlich |
 |---|---|---|---|
 | luftstrom | Diagnose | Umsetzung, Bestaetigung, Protokoll | erweiterte Freigabe |
 | ram | Diagnose | Umsetzung, Freigabe, Protokoll | erweiterter Rollback |
@@ -245,7 +249,9 @@ Praevention:
 Diese Generatorlogik sollte spaeter nicht nur als Text existieren, sondern als feste Ableitungsregel:
 
 - aus `problemtyp`
+- aus `regelklasse`
 - aus `betriebsklasse`
+- aus `berechtigungsstufe`
 - aus `bestaetigungsstufe`
 - aus `risiko`
 - aus `offene_luecken`

@@ -28,9 +28,10 @@ Dieses Schema definiert den formalen Aufbau eines Loesungsknotens, sodass Diagno
 | `evidenz` | belastbare Nachweise |
 | `offene_luecken` | fehlende Daten oder Unsicherheiten |
 | `risiko` | Betriebs-, Daten- oder Sicherheitsrisiko |
-| `betriebsklasse` | P0 bis P3 |
-| `freigabestufe` | A0 bis A3 |
-| `bestaetigungsstufe` | W0 bis W3 |
+| `regelklasse` | R0 bis R4 |
+| `betriebsklasse` | B0 bis B4 |
+| `berechtigungsstufe` | G0 bis G4 |
+| `bestaetigungsstufe` | N0 bis N4 |
 | `checklisten_typen` | welche Checklisten entstehen sollen |
 | `rollback` | Rueckfallstrategie oder Abbruchpunkt |
 | `protokollpflicht` | ja oder erweitert |
@@ -111,9 +112,10 @@ offene_luecken:
   - keine Foto-Dokumentation vorhanden
 risiko:
   - mittel
-betriebsklasse: P2
-freigabestufe: A2
-bestaetigungsstufe: W2
+regelklasse: R1
+betriebsklasse: B2
+berechtigungsstufe: G2
+bestaetigungsstufe: N2
 checklisten_typen:
   - diagnose
   - umsetzung
@@ -132,7 +134,9 @@ praeventionshinweis:
 
 Aus dem Schema folgen spaeter automatische oder halbautomatische Artefakte:
 
-- `betriebsklasse` bestimmt Freigabe und Bestaetigung
+- `regelklasse` bestimmt die Regelbindung
+- `betriebsklasse` bestimmt die Eingriffstiefe
+- `berechtigungsstufe` bestimmt Freigabe und Ausfuehrungsrecht
 - `problemtyp` bestimmt die Grundbausteine der Checkliste
 - `risiko` bestimmt Eskalationstiefe
 - `offene_luecken` erzeugt Datennachforderungen
@@ -160,7 +164,7 @@ Ein Loesungsknoten gilt erst als praxisnah, wenn aus ihm mindestens eine explizi
 
 Regel:
 
-> Kein P2- oder P3-Loesungsknoten ohne Umsetzungs-, Bestaetigungs- und Protokoll-Checkliste.
+> Kein Loesungsknoten der Klassen R2/B2 oder hoeher ohne Umsetzungs-, Bestaetigungs- und Protokoll-Checkliste.
 
 ---
 
