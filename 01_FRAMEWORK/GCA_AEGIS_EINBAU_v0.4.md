@@ -4,13 +4,13 @@
 
 Dieses Dokument prueft AEGIS nicht als fernes Zukunftsetikett, sondern als konkretes Einbau-Framework fuer GCA.
 
-AGI bleibt in GCA nur der Ausblick. Der operative Einbaupfad betrifft hier Sicherheit, Begrenzung, Freigabe, Nachweis und kontrollierte Ausfuehrung.
+AGI bleibt in GCA nur der Ausblick. Der operative Einbaupfad betrifft hier nicht allgemeines Infrastrukturmanagement, sondern Security, Angriffserkennung, forensische Analyse, Anonymisierung und Wissensueberfuehrung.
 
 ---
 
 ## 1. Grundsatz
 
-> GCA beschreibt, wie Probleme verstanden, verdichtet und in Loesungsknoten ueberfuehrt werden. AEGIS beschreibt, wie riskante oder produktive Wirkung begrenzt, geprueft, freigegeben, bestaetigt und notfalls gestoppt wird.
+> GCA beschreibt, wie Probleme verstanden, verdichtet und in Loesungsknoten ueberfuehrt werden. AEGIS beschreibt, wie Angriffe, verdaechtige Aktivitaeten und Schadensmuster erkannt, forensisch aufgearbeitet, begrenzt, anonymisiert und als Sicherheitswissen rueckgefuehrt werden.
 
 Damit ist AEGIS fuer GCA kein Ersatz, sondern ein Einbaurahmen fuer die Durchsetzungsseite.
 
@@ -20,12 +20,12 @@ Damit ist AEGIS fuer GCA kein Ersatz, sondern ein Einbaurahmen fuer die Durchset
 
 Aus GCA-Sicht braucht der Einbau vor allem sechs Funktionen:
 
-1. Vorpruefung vor jeder riskanten oder produktiven Aenderung
-2. Regel- und Klassenpruefung gegen `Regelklasse`, `Betriebsklasse` und `Berechtigungsstufe`
-3. Nachweissicherung fuer Evidenz, Bestaetigung und Protokoll
-4. Begrenzung des Handlungsspielraums bei unsicherer Datenlage
-5. Notstopp oder Abbruchmoeglichkeit bei Grenzverletzung
-6. sichtbare Rueckmeldung an Mensch und Protokollschicht
+1. Erkennung von Angriffen, Anomalien oder verdaechtigen Mustern
+2. forensische Analyse auch dann, wenn der genaue Wurm oder Algorithmus noch nicht vollstaendig verstanden ist
+3. Nachweissicherung fuer Artefakte, Verlauf und Befunde
+4. Begrenzung oder Eindämmung bei laufendem Angriff
+5. Anonymisierung der Erkenntnisse fuer spaetere sichere Ueberfuehrung
+6. Rueckfuehrung in Wissensknoten, Fallkarten oder spaetere Sicherheitsdatenbank
 
 ---
 
@@ -33,53 +33,53 @@ Aus GCA-Sicht braucht der Einbau vor allem sechs Funktionen:
 
 | GCA-Bedarf | AEGIS-Einbaurolle |
 |---|---|
-| Loesungsknoten mit Freigabelogik | AEGIS prueft Klassenlage und blockiert unzulaessige Ausfuehrung |
-| Fallkarten | AEGIS liest Falltyp, Klassen und Mindest-Evidenz als operative Steuerdaten |
-| Checklisten-Ableitung | AEGIS erzwingt die Pflichtschritte vor und nach Produktiveingriffen |
-| menschliche Freigabe | AEGIS setzt nur freigegebene Aktionen in den ausfuehrbaren Bereich |
-| Bestaetigung | AEGIS sammelt Gegenpruefung, Monitoring oder Bediennachweis |
-| Eskalation | AEGIS friert, stoppt oder verweist an hoehere Berechtigung |
+| Sicherheitsereignis | AEGIS erkennt, sammelt und priorisiert verdaechtige Befunde |
+| forensischer Fall | AEGIS fuehrt Artefakte, Verlauf und Hypothesen zusammen |
+| Wissensknoten | AEGIS liefert belastbare Sicherheitsfaelle als Eingabe fuer GCA |
+| Fallkarten | AEGIS erzeugt oder befuellt spaetere Sicherheits-Fallkarten |
+| Anonymisierung | AEGIS trennt sensible Einzeldaten von wiederverwendbarem Musterwissen |
+| Eskalation | AEGIS begrenzt, isoliert oder uebergibt an den Menschen |
 
 ---
 
 ## 4. Empfohlene AEGIS-Unterfunktionen fuer den Einbau
 
-### 4.1 Ausfuehrungspruefung vor Mutation
+### 4.1 Erkennung und Vorbewertung
 
 Das ist der wichtigste Einbaupunkt.
 
-Bevor aus einem GCA-Loesungsknoten eine reale Handlung wird, muss AEGIS mindestens pruefen:
+Bevor ueberhaupt ein Sicherheitsfall in GCA als wiederverwendbarer Fall landet, sollte AEGIS mindestens pruefen:
 
-- ist die Evidenz ausreichend?
-- ist die Regelklasse korrekt?
-- ist die Betriebsklasse korrekt?
-- liegt die benoetigte Berechtigungsstufe vor?
-- ist Rollback definiert?
-- ist die Bestaetigungspflicht gesetzt?
+- liegt wirklich ein Angriff, Verdachtsfall oder relevantes Anomaliemuster vor?
+- welche Artefakte sind vorhanden?
+- welche Teile sind gesichert, welche nur vermutet?
+- ist sofortige Begrenzung noetig?
 
-### 4.2 Begrenzungswaechter
+### 4.2 Forensische Verdichtung
 
-AEGIS sollte produktive oder sicherheitsrelevante Grenzverletzungen aktiv blockieren.
+AEGIS sollte aus rohen Sicherheitsereignissen einen belastbaren forensischen Fall machen.
 
-Beispiele:
+Dazu gehoeren:
 
-- keine Cluster-Aenderung ohne G3
-- keine zentrale Storage-Aenderung ohne starke Bestaetigung
-- keine Netzpfad-Umschaltung ohne Rueckweg und Gegenmessung
+- Artefakte sammeln
+- zeitlichen Verlauf ordnen
+- moegliche Ursachen oder Mechanismen abgrenzen
+- offene Luecken sichtbar lassen
 
-### 4.3 Nachweis- und Protokollschicht
+### 4.3 Anonymisierung und Wissensueberfuehrung
 
-AEGIS sollte die Beweiskette sichern:
+AEGIS sollte aus einem Einzelfall spaeter ein wiederverwendbares Sicherheitsmuster machen, ohne sensible Details mitzufuehren.
 
-- Eingabedaten
-- Klasseneinstufung
-- Freigabeentscheidung
-- reale Durchfuehrung
-- Stabilisierung oder Abbruch
+Das ist fuer GCA zentral, weil genau dort der Uebergang von Einzelfall zu Wissensknoten entsteht.
 
-### 4.4 Notstopp und Abbruchpfad
+### 4.4 Begrenzung und Uebergabe
 
-Wenn eine Regelgrenze verletzt wird oder Evidenz fehlt, braucht GCA keinen kreativen Weiterlauf, sondern einen klaren AEGIS-Abbruchpfad.
+Wenn ein Angriff aktiv ist oder die Lage unklar bleibt, braucht es:
+
+- Begrenzung
+- Eskalation
+- menschliche Uebergabe
+- spaetere Rueckfuehrung in das Wissenssystem
 
 ---
 
@@ -89,71 +89,46 @@ Ich wuerde AEGIS nicht als neue diffuse Oberschicht beschreiben, sondern als fue
 
 | Einbaumodul | Rolle |
 |---|---|
-| AEGIS Vorpruefung | prueft Klassen, Evidenz und Freigabe vor Ausfuehrung |
-| AEGIS Regelwaechter | blockiert unzulaessige oder zu hochklassige Schritte |
-| AEGIS Nachweissicherung | sammelt Evidenz, Bestaetigung und Protokoll |
-| AEGIS Notstopp | friert oder bricht riskante Wege ab |
-| AEGIS Rueckmeldung | liefert Status an Mensch, Fallkarte und Loesungsknoten zurueck |
+| AEGIS Erkennung | sammelt und priorisiert sicherheitsrelevante Befunde |
+| AEGIS Forensik | verdichtet Artefakte und Verlauf zu einem forensischen Fall |
+| AEGIS Begrenzung | friert, isoliert oder blockiert bei aktivem Risiko |
+| AEGIS Anonymisierung | trennt sensible Einzeldaten von wiederverwendbarem Musterwissen |
+| AEGIS Rueckfuehrung | ueberfuehrt den Fall in Wissensknoten, Fallkarte oder Sicherheitsdatenbank |
 
 ---
 
-## 6. Einbau in die sieben Testfaelle
+## 6. Was AEGIS in GCA abdecken sollte und was nicht
 
-### 6.1 Hitzestau
+AEGIS sollte in GCA primaer diese Falltypen abdecken:
 
-AEGIS-Rolle:
+- Angriff oder Malware-Verdacht
+- Wurm, Exploit oder unbekannte Schadlogik
+- Anomalie mit forensischem Untersuchungsbedarf
+- Vorfall mit Artefakt-, Log- oder Verlaufsauswertung
+- Rueckfuehrung eines Sicherheitsvorfalls in anonymisiertes Musterwissen
 
-- Freigabe fuer physischen Eingriff pruefen
-- Vorher-Nachher-Nachweis sichern
-- Rueckdokumentation erzwingen
+AEGIS sollte nicht der primaere Rahmen sein fuer:
 
-### 6.2 RAM
+- allgemeine RAM-Erweiterung
+- Storage-Kapazitaetsplanung
+- normales Backup-Tuning
+- allgemeines Netzwerk- oder Server-Management
 
-AEGIS-Rolle:
+Diese Faelle bleiben GCA-Betriebs- und Infrastrukturfaelle. AEGIS wird erst dann relevant, wenn darin ein echter Security- oder Forensikbezug entsteht.
 
-- Host-Machbarkeit als Pflichtbeweis erzwingen
-- Erweiterung ohne Wartungsfenster blockieren
-- Freigabe und Umsetzungsprotokoll absichern
+### 6.1 Typischer AEGIS-Fall in GCA
 
-### 6.3 Backupfenster
+Ein plausibler AEGIS-Fall waere:
 
-AEGIS-Rolle:
-
-- Restore-Nachweis als Pflichtgrenze setzen
-- Lastfenster ohne Freigabe nicht produktiv aendern lassen
-- bei fehlendem Rueckfallpfad blockieren
-
-### 6.4 Provisioning RAM und Storage
-
-AEGIS-Rolle:
-
-- gekoppelte Aenderung als hoeheren Eingriffsfall behandeln
-- Thin-Provisioning und Rollback explizit pruefen
-- Freigabe und Bestaetigung zusammenhalten
-
-### 6.5 Kubernetes
-
-AEGIS-Rolle:
-
-- Cluster-Aenderung als B3-Fall erzwingen
-- Rollback-Pflicht vor Mutation setzen
-- Ereignisse, Klassenlage und Freigabe sichtbar koppeln
-
-### 6.6 Netzwerk
-
-AEGIS-Rolle:
-
-- produktive Umschaltungen nur nach G3
-- Gegenmessung und Rueckweg absichern
-- Seiteneffekte auf mehrere Dienste mitdenken
-
-### 6.7 NAS oder NetApp
-
-AEGIS-Rolle:
-
-- zentrale Storage-Aenderung als R3/B3 bis B4 behandeln
-- Schnellloeschung oder Retention-Aenderung blockieren, solange keine starke Freigabe vorliegt
-- Restore- und Compliance-Risiko in die Grenze ziehen
+```text
+1. Angriff oder Anomalie wird erkannt
+2. Artefakte und Verlauf werden gesichert
+3. Ursache bleibt teilweise unklar
+4. Schaden wird begrenzt
+5. Fall wird forensisch verdichtet
+6. sensible Details werden anonymisiert
+7. Ergebnis wird als Sicherheits-Wissensknoten abgelegt
+```
 
 ---
 
@@ -169,22 +144,22 @@ beschrieben werden.
 
 Das waere zu unscharf. Stark wird AEGIS genau dann, wenn es eng bleibt:
 
-- Vorpruefung
+- Erkennung
+- Forensik
 - Begrenzung
-- Nachweissicherung
-- Freigabeabsicherung
-- Notstopp
+- Anonymisierung
+- Rueckfuehrung
 
 ---
 
 ## 8. Meine Einordnung
 
-Persoenlich wuerde ich AEGIS fuer GCA klar empfehlen, aber nicht als erstes grosses Visionsthema, sondern als operativen Sicherheits- und Durchsetzungsrahmen.
+Persoenlich wuerde ich AEGIS fuer GCA klar empfehlen, aber nicht als allgemeines Betriebsframework, sondern als operativen Sicherheits- und Forensikrahmen.
 
 Kurz:
 
-> GCA ohne AEGIS bleibt erkenntnisstark, aber ausfuehrungsschwach.  
-> AEGIS ohne GCA bleibt kontrollstark, aber problemverstaendlich schwach.
+> GCA ohne AEGIS bleibt bei Sicherheitsvorfaellen erkenntnisarm.  
+> AEGIS ohne GCA bleibt vorfallsstark, aber schwach in dauerhafter Wissensrueckfuehrung.
 
 Gerade zusammen wird daraus etwas Brauchbares.
 
@@ -192,19 +167,19 @@ Gerade zusammen wird daraus etwas Brauchbares.
 
 ## 9. Priorisierte Einbaureihenfolge
 
-1. AEGIS Vorpruefung an Loesungsknoten und Fallkarten koppeln
-2. Klassenpruefung vor Produktiveingriff erzwingen
-3. Nachweissicherung fuer Evidenz, Bestaetigung und Protokoll standardisieren
-4. Notstopp- und Abbruchpfad definieren
+1. AEGIS-Erkennung an spaetere Sicherheits-Fallkarten koppeln
+2. forensische Verdichtung als festen Weg in Wissensknoten definieren
+3. Anonymisierung vor Wissensueberfuehrung standardisieren
+4. Begrenzungs- und Abbruchpfad fuer laufende Angriffe festziehen
 5. erst spaeter feinere Unterkomponenten wie Canary, Hydra oder Dual Kernel sauber ausarbeiten
 
 ---
 
 ## 10. Schluss
 
-AEGIS ist fuer GCA kein AGI-Baustein, sondern ein Einbau-Framework fuer kontrollierte Wirksamkeit.
+AEGIS ist fuer GCA kein AGI-Baustein, sondern ein Einbau-Framework fuer kontrollierte Security- und Forensikwirksamkeit.
 
 Genau so wuerde ich es im Projekt fuehren:
 
 - `AGI` nur als Ausblick
-- `AEGIS` als konkreten Einbaurahmen
+- `AEGIS` als konkreten Security- und Forensikrahmen

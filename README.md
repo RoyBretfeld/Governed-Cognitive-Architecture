@@ -53,7 +53,7 @@ Hinweise:
 - `01_FRAMEWORK/GCA_KLASSENMODELL_v0.4.md` trennt Regelklasse, Betriebsklasse und Berechtigungsstufe fuer feinere Fallsteuerung.
 - `01_FRAMEWORK/GCA_LOESUNGSKNOTEN_SCHEMA_v0.3.md` definiert den formalen Aufbau eines wiederverwendbaren Loesungsknotens.
 - `01_FRAMEWORK/GCA_CHECKLISTEN_ABLEITUNG_v0.3.md` legt fest, welche Checklisten aus Problemtyp, Betriebsklasse und Risiko abgeleitet werden.
-- `01_FRAMEWORK/GCA_AEGIS_EINBAU_v0.4.md` prueft AEGIS als konkreten Einbaurahmen fuer Vorpruefung, Begrenzung, Nachweissicherung und Notstopp.
+- `01_FRAMEWORK/GCA_AEGIS_EINBAU_v0.4.md` prueft AEGIS als konkreten Security- und Forensikrahmen fuer Erkennung, Begrenzung, Anonymisierung und Wissensrueckfuehrung.
 - `01_FRAMEWORK/GCA_AGI_AUSBLICK_v0.4.md` ordnet ein, welche Teile von GCA heute ernsthaft in Richtung AGI-Forschung weisen und welche noch fehlen.
 - `03_SIMULATION_UND_VALIDIERUNG/SIMULATION_AUSWERTUNG_v0.2.md` dokumentiert die drei virtuellen Testlaeufe mit Ergebnis und Restluecken.
 - `03_SIMULATION_UND_VALIDIERUNG/SIMULATION_DURCHLAEUFE_v0.3.md` fuehrt alle sieben aktuell vorhandenen Testfaelle virtuell mit Kurzurteil und Einschaetzung durch.

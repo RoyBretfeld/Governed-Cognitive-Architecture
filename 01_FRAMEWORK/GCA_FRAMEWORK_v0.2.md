@@ -183,23 +183,14 @@ Neue Regel:
 
 ## 9. Bezug zu AEGIS
 
-AEGIS wird in v0.2 nicht als magische Zusatzschicht behandelt, sondern als Sicherheits- und Governance-Ausfuehrung fuer GCA-Prinzipien.
-
-| GCA-Bedarf | AEGIS-Rolle |
-|---|---|
-| Governance-Grenzen | erzwingt, dass aus Analyse nicht stillschweigend Aktion wird |
-| Evidenz | sammelt, signiert oder bewahrt belastbare Nachweise |
-| Bestaetigung | bestaetigt Durchfuehrung, Monitoring oder Gegenkontrolle |
-| Regelgrenzen | blockiert unzulaessige Klassen von Aenderungen |
-| autonome Pruefprozesse | erlaubt Hintergrundanalyse bei gesperrter Produktivwirkung |
-| menschliche Freigabe | bildet den echten Freigabepunkt fuer P2 und P3 |
+AEGIS wird in v0.2 nicht als allgemeines Betriebsframework behandelt, sondern als moeglicher Security- und Forensikrahmen fuer GCA.
 
 Praktische Ableitung:
 
 - GCA beschreibt die Denk- und Wissenslogik.
-- AEGIS beschreibt die Durchsetzungs- und Schutzlogik.
-- Ohne AEGIS bleibt GCA begrenzt kontrolliert.
-- Ohne GCA bleibt AEGIS regelstark, aber erkenntnisschwach.
+- AEGIS beschreibt fuer Sicherheitsvorfaelle Erkennung, Begrenzung, Forensik und Rueckfuehrung.
+- Ohne AEGIS bleibt GCA bei Angriffs- und Forensikfaellen zu allgemein.
+- Ohne GCA bleibt AEGIS vorfallsstark, aber schwach in dauerhafter Wissensverdichtung.
 
 ---
 
