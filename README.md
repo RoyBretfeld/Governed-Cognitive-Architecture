@@ -12,6 +12,8 @@ Wichtige Dateien:
 00_MASTER/GCA_WIDERSPRUECHE_UND_OFFENE_SPANNUNGEN_v1.0.md
 00_MASTER/GEDANKENSPIEL_FRAMEWORK_v0.1.md
 01_FRAMEWORK/GCA_FRAMEWORK_v0.2.md
+01_FRAMEWORK/GCA_VERARBEITUNGSKREIS_v0.2.md
+01_FRAMEWORK/GCA_WISSENSKNOTEN_v0.2.md
 01_FRAMEWORK/GCA_REGEL_UND_FREIGABEMATRIX_v0.3.md
 01_FRAMEWORK/GCA_KLASSENMODELL_v0.4.md
 01_FRAMEWORK/GCA_LOESUNGSKNOTEN_SCHEMA_v0.3.md
@@ -50,6 +52,8 @@ Hinweise:
 - `GCA_KANON_v1.0.md` ist der neue kanonische Zielstand.
 - `GCA_REVIEW.md` ist die kritische Gutachterbewertung nach der Migration.
 - `01_FRAMEWORK/GCA_FRAMEWORK_v0.2.md` ist die operative Nachschaerfung nach der Erstsimulation.
+- `01_FRAMEWORK/GCA_VERARBEITUNGSKREIS_v0.2.md` schliesst den inneren Eingabe-zu-Knoten-Kreis als Arbeitslogik.
+- `01_FRAMEWORK/GCA_WISSENSKNOTEN_v0.2.md` setzt den allgemeinen Wissensknoten als Oberobjekt vor den spezialisierten Loesungsknoten.
 - `01_FRAMEWORK/GCA_REGEL_UND_FREIGABEMATRIX_v0.3.md` formalisiert Betriebsklassen, Freigabestufen und Bestaetigungsanforderungen.
 - `01_FRAMEWORK/GCA_KLASSENMODELL_v0.4.md` trennt Regelklasse, Betriebsklasse und Berechtigungsstufe fuer feinere Fallsteuerung.
 - `01_FRAMEWORK/GCA_LOESUNGSKNOTEN_SCHEMA_v0.3.md` definiert den formalen Aufbau eines wiederverwendbaren Loesungsknotens.
