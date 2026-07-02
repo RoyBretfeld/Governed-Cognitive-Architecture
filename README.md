@@ -18,6 +18,7 @@ Wichtige Dateien:
 01_FRAMEWORK/GCA_CHECKLISTEN_ABLEITUNG_v0.3.md
 01_FRAMEWORK/GCA_AEGIS_EINBAU_v0.4.md
 01_FRAMEWORK/GCA_AGI_AUSBLICK_v0.4.md
+01_FRAMEWORK/GCA_VERARBEITUNGSKREIS_STATUS_v0.1.md
 02_REGISTRY_ERWEITERUNG/REGISTRY_ERWEITERUNG_FRAMEWORKS_v0.1.md
 03_SIMULATION_UND_VALIDIERUNG/SIMULATIONSPRINZIP_v0.1.md
 03_SIMULATION_UND_VALIDIERUNG/SIMULATION_AUSWERTUNG_v0.2.md
@@ -55,6 +56,7 @@ Hinweise:
 - `01_FRAMEWORK/GCA_CHECKLISTEN_ABLEITUNG_v0.3.md` legt fest, welche Checklisten aus Problemtyp, Betriebsklasse und Risiko abgeleitet werden.
 - `01_FRAMEWORK/GCA_AEGIS_EINBAU_v0.4.md` prueft AEGIS als konkreten Security- und Forensikrahmen fuer Erkennung, Begrenzung, Anonymisierung und Wissensrueckfuehrung.
 - `01_FRAMEWORK/GCA_AGI_AUSBLICK_v0.4.md` ordnet ein, welche Teile von GCA heute ernsthaft in Richtung AGI-Forschung weisen und welche noch fehlen.
+- `01_FRAMEWORK/GCA_VERARBEITUNGSKREIS_STATUS_v0.1.md` trennt klar, was im Verarbeitungskreis schon vorhanden ist und was noch entwickelt werden muss.
 - `03_SIMULATION_UND_VALIDIERUNG/SIMULATION_AUSWERTUNG_v0.2.md` dokumentiert die drei virtuellen Testlaeufe mit Ergebnis und Restluecken.
 - `03_SIMULATION_UND_VALIDIERUNG/SIMULATION_DURCHLAEUFE_v0.3.md` fuehrt alle sieben aktuell vorhandenen Testfaelle virtuell mit Kurzurteil und Einschaetzung durch.
 - `03_SIMULATION_UND_VALIDIERUNG/FALLKARTEN_v0.4.md` verdichtet die sieben Testfaelle in operative Fallkarten mit Klassen, Evidenz, Checklisten und Rollback.
