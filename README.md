@@ -16,10 +16,12 @@ Wichtige Dateien:
 01_FRAMEWORK/GCA_KLASSENMODELL_v0.4.md
 01_FRAMEWORK/GCA_LOESUNGSKNOTEN_SCHEMA_v0.3.md
 01_FRAMEWORK/GCA_CHECKLISTEN_ABLEITUNG_v0.3.md
+01_FRAMEWORK/GCA_AGI_AUSBLICK_v0.4.md
 02_REGISTRY_ERWEITERUNG/REGISTRY_ERWEITERUNG_FRAMEWORKS_v0.1.md
 03_SIMULATION_UND_VALIDIERUNG/SIMULATIONSPRINZIP_v0.1.md
 03_SIMULATION_UND_VALIDIERUNG/SIMULATION_AUSWERTUNG_v0.2.md
 03_SIMULATION_UND_VALIDIERUNG/SIMULATION_DURCHLAEUFE_v0.3.md
+03_SIMULATION_UND_VALIDIERUNG/FALLKARTEN_v0.4.md
 03_SIMULATION_UND_VALIDIERUNG/TESTFALL_01_HITZESTAU.md
 03_SIMULATION_UND_VALIDIERUNG/TESTFALL_02_RAM_KAPAZITAET.md
 03_SIMULATION_UND_VALIDIERUNG/TESTFALL_03_BACKUPFENSTER.md
@@ -50,8 +52,10 @@ Hinweise:
 - `01_FRAMEWORK/GCA_KLASSENMODELL_v0.4.md` trennt Regelklasse, Betriebsklasse und Berechtigungsstufe fuer feinere Fallsteuerung.
 - `01_FRAMEWORK/GCA_LOESUNGSKNOTEN_SCHEMA_v0.3.md` definiert den formalen Aufbau eines wiederverwendbaren Loesungsknotens.
 - `01_FRAMEWORK/GCA_CHECKLISTEN_ABLEITUNG_v0.3.md` legt fest, welche Checklisten aus Problemtyp, Betriebsklasse und Risiko abgeleitet werden.
+- `01_FRAMEWORK/GCA_AGI_AUSBLICK_v0.4.md` ordnet ein, welche Teile von GCA heute ernsthaft in Richtung AGI-Forschung weisen und welche noch fehlen.
 - `03_SIMULATION_UND_VALIDIERUNG/SIMULATION_AUSWERTUNG_v0.2.md` dokumentiert die drei virtuellen Testlaeufe mit Ergebnis und Restluecken.
 - `03_SIMULATION_UND_VALIDIERUNG/SIMULATION_DURCHLAEUFE_v0.3.md` fuehrt alle sieben aktuell vorhandenen Testfaelle virtuell mit Kurzurteil und Einschaetzung durch.
+- `03_SIMULATION_UND_VALIDIERUNG/FALLKARTEN_v0.4.md` verdichtet die sieben Testfaelle in operative Fallkarten mit Klassen, Evidenz, Checklisten und Rollback.
 - `GOVERNED_COGNITIVE_ARCHITECTURE_GCA_v1.0.md` und `00_MASTER/GCA_DOSSIER/` bleiben als fruehere Konsolidierungsstufen erhalten.
 - `GCA_WIDERSPRUECHE_UND_OFFENE_SPANNUNGEN_v1.0.md` ist eine aeltere Spannungsfassung und nicht mehr der primaere Zielstand.
 - Die Registry bleibt eigenstaendig. Das Projekt erweitert sie nur um moegliche Framework-, Pattern- und Solution-Knoten.
