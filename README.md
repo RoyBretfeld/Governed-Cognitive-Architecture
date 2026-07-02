@@ -12,6 +12,9 @@ Wichtige Dateien:
 00_MASTER/GCA_WIDERSPRUECHE_UND_OFFENE_SPANNUNGEN_v1.0.md
 00_MASTER/GEDANKENSPIEL_FRAMEWORK_v0.1.md
 01_FRAMEWORK/GCA_FRAMEWORK_v0.2.md
+01_FRAMEWORK/GCA_POLICY_APPROVAL_MATRIX_v0.3.md
+01_FRAMEWORK/GCA_LOESUNGSKNOTEN_SCHEMA_v0.3.md
+01_FRAMEWORK/GCA_CHECKLISTEN_GENERATOR_v0.3.md
 02_REGISTRY_ERWEITERUNG/REGISTRY_ERWEITERUNG_FRAMEWORKS_v0.1.md
 03_SIMULATION_UND_VALIDIERUNG/SIMULATIONSPRINZIP_v0.1.md
 03_SIMULATION_UND_VALIDIERUNG/SIMULATION_AUSWERTUNG_v0.2.md
@@ -42,6 +45,9 @@ Hinweise:
 - `GCA_KANON_v1.0.md` ist der neue kanonische Zielstand.
 - `GCA_REVIEW.md` ist die kritische Gutachterbewertung nach der Migration.
 - `01_FRAMEWORK/GCA_FRAMEWORK_v0.2.md` ist die operative Nachschaerfung nach der Erstsimulation.
+- `01_FRAMEWORK/GCA_POLICY_APPROVAL_MATRIX_v0.3.md` formalisiert Policy-Klassen, Freigabestufen und Witness-Anforderungen.
+- `01_FRAMEWORK/GCA_LOESUNGSKNOTEN_SCHEMA_v0.3.md` definiert den formalen Aufbau eines wiederverwendbaren Loesungsknotens.
+- `01_FRAMEWORK/GCA_CHECKLISTEN_GENERATOR_v0.3.md` legt fest, welche Checklisten aus Problemtyp, Policy und Risiko abgeleitet werden.
 - `03_SIMULATION_UND_VALIDIERUNG/SIMULATION_AUSWERTUNG_v0.2.md` dokumentiert die drei virtuellen Testlaeufe mit Ergebnis und Restluecken.
 - `03_SIMULATION_UND_VALIDIERUNG/SIMULATION_DURCHLAEUFE_v0.3.md` fuehrt alle sieben aktuell vorhandenen Testfaelle virtuell mit Kurzurteil und Einschaetzung durch.
 - `GOVERNED_COGNITIVE_ARCHITECTURE_GCA_v1.0.md` und `00_MASTER/GCA_DOSSIER/` bleiben als fruehere Konsolidierungsstufen erhalten.
