@@ -11,8 +11,10 @@ Wichtige Dateien:
 00_MASTER/GOVERNED_COGNITIVE_ARCHITECTURE_GCA_v1.0.md
 00_MASTER/GCA_WIDERSPRUECHE_UND_OFFENE_SPANNUNGEN_v1.0.md
 00_MASTER/GEDANKENSPIEL_FRAMEWORK_v0.1.md
+01_FRAMEWORK/GCA_FRAMEWORK_v0.2.md
 02_REGISTRY_ERWEITERUNG/REGISTRY_ERWEITERUNG_FRAMEWORKS_v0.1.md
 03_SIMULATION_UND_VALIDIERUNG/SIMULATIONSPRINZIP_v0.1.md
+03_SIMULATION_UND_VALIDIERUNG/SIMULATION_AUSWERTUNG_v0.2.md
 03_SIMULATION_UND_VALIDIERUNG/TESTFALL_01_HITZESTAU.md
 03_SIMULATION_UND_VALIDIERUNG/TESTFALL_02_RAM_KAPAZITAET.md
 03_SIMULATION_UND_VALIDIERUNG/TESTFALL_03_BACKUPFENSTER.md
@@ -34,6 +36,8 @@ Hinweise:
 - `00_ARCHITEKTUR_AUDIT.md` ist der vollstaendige Audit des aktuellen Bestands.
 - `GCA_KANON_v1.0.md` ist der neue kanonische Zielstand.
 - `GCA_REVIEW.md` ist die kritische Gutachterbewertung nach der Migration.
+- `01_FRAMEWORK/GCA_FRAMEWORK_v0.2.md` ist die operative Nachschaerfung nach der Erstsimulation.
+- `03_SIMULATION_UND_VALIDIERUNG/SIMULATION_AUSWERTUNG_v0.2.md` dokumentiert die drei virtuellen Testlaeufe mit Ergebnis und Restluecken.
 - `GOVERNED_COGNITIVE_ARCHITECTURE_GCA_v1.0.md` und `00_MASTER/GCA_DOSSIER/` bleiben als fruehere Konsolidierungsstufen erhalten.
 - `GCA_WIDERSPRUECHE_UND_OFFENE_SPANNUNGEN_v1.0.md` ist eine aeltere Spannungsfassung und nicht mehr der primaere Zielstand.
 - Die Registry bleibt eigenstaendig. Das Projekt erweitert sie nur um moegliche Framework-, Pattern- und Solution-Knoten.
