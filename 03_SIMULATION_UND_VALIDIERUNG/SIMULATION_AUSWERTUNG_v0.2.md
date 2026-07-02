@@ -112,7 +112,7 @@ Der aktuelle Framework-Kern erkennt das Problem und kann eine vernueftige Richtu
 
 ### Was fehlt
 
-- eine Policy-Grenze fuer produktive Lastspitzen
+- eine Regelgrenze fuer produktive Lastspitzen
 - ein Pflichtfeld fuer geschaeftskritische Zeitfenster
 - eine Regel fuer Restore-Nachweis vor dauerhafter Freigabe
 - eine definierte Eskalation, wenn kein stoerungsfreies Zeitfenster existiert
@@ -137,14 +137,14 @@ Gesamtstatus:
 
 `teilweise tragfaehig`
 
-Der aktuelle GCA-Kern funktioniert fuer strukturierte Diagnose und dokumentierte Problembehandlung bereits sichtbar. Noch nicht stark genug ausgearbeitet sind Evidenzpflicht, Witness-Logik, Policy-Grenzen, Human Approval und autonome Vorpruefprozesse.
+Der aktuelle GCA-Kern funktioniert fuer strukturierte Diagnose und dokumentierte Problembehandlung bereits sichtbar. Noch nicht stark genug ausgearbeitet sind Evidenzpflicht, Bestaetigungslogik, Regelgrenzen, menschliche Freigabe und autonome Vorpruefprozesse.
 
 ---
 
 ## Abgeleitete Nachschaerfungen fuer v0.2
 
 1. Jeder Loesungsknoten braucht ein Evidenzpaket mit Mindestdaten, Annahmen und offenen Luecken.
-2. Jeder produktionsnahe Vorschlag braucht eine Policy-Klasse und einen klaren Human-Approval-Status.
-3. Kritische oder physische Aenderungen duerfen nur ueber Checkliste, Witness und Protokoll in die Umsetzung gehen.
+2. Jeder produktionsnahe Vorschlag braucht eine Betriebsklasse und einen klaren Freigabestatus.
+3. Kritische oder physische Aenderungen duerfen nur ueber Checkliste, Bestaetigung und Protokoll in die Umsetzung gehen.
 4. Negative Erfahrung muss nicht nur als `DEAD_ENDS`, sondern auch als begruendete Nicht-Freigabe erhalten bleiben.
 5. Autonome Pruefprozesse duerfen Daten sammeln, Simulationen fahren und Konflikte markieren, aber keine produktiven Aenderungen selbst freigeben.

@@ -1,4 +1,4 @@
-# GCA Checklisten Generator v0.3
+# GCA Checklisten-Ableitung v0.3
 
 ## Zweck
 
@@ -10,7 +10,7 @@ Das ist wichtig, damit Checklisten spaeter nicht zufaellig oder nur aus Erinneru
 
 ## 1. Grundregel
 
-> Checklisten sind keine freien Notizen. Sie sind abgeleitete Folgeartefakte aus Problemtyp, Policy-Klasse, Risiko, Evidence und Witness.
+> Checklisten sind keine freien Notizen. Sie sind abgeleitete Folgeartefakte aus Problemtyp, Betriebsklasse, Risiko, Evidenz und Bestaetigung.
 
 ---
 
@@ -20,8 +20,8 @@ Das ist wichtig, damit Checklisten spaeter nicht zufaellig oder nur aus Erinneru
 |---|---|
 | Diagnose-Checkliste | notwendige Datenerhebung und Abgrenzung |
 | Umsetzungs-Checkliste | konkrete produktive oder physische Handlung |
-| Freigabe-Checkliste | Approval, Rollen, Zeitfenster, Rollback |
-| Witness-Checkliste | Nachweise der Durchfuehrung oder Stabilisierung |
+| Freigabe-Checkliste | Freigabe, Rollen, Zeitfenster, Rollback |
+| Bestaetigungs-Checkliste | Nachweise der Durchfuehrung oder Stabilisierung |
 | Protokoll-Checkliste | dokumentierte Ist-Durchfuehrung |
 | Praeventions-Checkliste | Wiederholungsschutz oder Wartungsueberfuehrung |
 
@@ -32,7 +32,7 @@ Das ist wichtig, damit Checklisten spaeter nicht zufaellig oder nur aus Erinneru
 ```text
 Loesungsknoten lesen
 -> Problemtyp erkennen
--> Policy-Klasse lesen
+-> Betriebsklasse lesen
 -> Risiko lesen
 -> offene Luecken lesen
 -> daraus Pflicht-Checklisten bestimmen
@@ -42,7 +42,7 @@ Pflichtregeln:
 
 - P0 erzeugt meist nur Diagnose-Checkliste oder gar keine
 - P1 erzeugt Diagnose- plus Vorschlags- oder Freigabevorlage
-- P2 erzeugt Diagnose-, Umsetzungs-, Freigabe-, Witness- und Protokoll-Checkliste
+- P2 erzeugt Diagnose-, Umsetzungs-, Freigabe-, Bestaetigungs- und Protokoll-Checkliste
 - P3 erzeugt dieselben wie P2 plus erweiterte Rollback- und Praeventionspunkte
 
 ---
@@ -52,7 +52,7 @@ Pflichtregeln:
 ### Diagnose-Checkliste
 
 - Symptom bestaetigt
-- Mindest-Evidence gesammelt
+- Mindest-Evidenz gesammelt
 - Alternativen geprueft
 - offene Luecken sichtbar
 
@@ -65,13 +65,13 @@ Pflichtregeln:
 
 ### Freigabe-Checkliste
 
-- Policy-Klasse bestaetigt
-- Human Approval eingeholt
+- Betriebsklasse bestaetigt
+- menschliche Freigabe eingeholt
 - Rollen benannt
 - Zeitfenster festgelegt
 - Rollback bestaetigt
 
-### Witness-Checkliste
+### Bestaetigungs-Checkliste
 
 - Wer oder was bestaetigt?
 - welcher Nachweis liegt vor?
@@ -88,7 +88,7 @@ Pflichtregeln:
 ### Praeventions-Checkliste
 
 - wiederkehrende Ursache erkannt?
-- Wartung oder Policy noetig?
+- Wartung oder Regelanpassung noetig?
 - Monitoring-Schwellen anpassen?
 - neues Regelwissen uebernehmen?
 
@@ -150,7 +150,7 @@ Umsetzung:
 Praevention:
 
 - Growth-Monitoring
-- Snapshot-Policy pruefen
+- Snapshot-Regel pruefen
 
 ### 5.4 Backup oder Betriebsfenster
 
@@ -212,17 +212,17 @@ Praevention:
 
 ---
 
-## 6. Matrix aus Problemtyp und Policy
+## 6. Matrix aus Problemtyp und Betriebsklasse
 
 | Problemtyp | P0/P1 erzeugt | P2 erzeugt zusaetzlich | P3 erzeugt zusaetzlich |
 |---|---|---|---|
-| luftstrom | Diagnose | Umsetzung, Witness, Protokoll | erweiterte Freigabe |
+| luftstrom | Diagnose | Umsetzung, Bestaetigung, Protokoll | erweiterte Freigabe |
 | ram | Diagnose | Umsetzung, Freigabe, Protokoll | erweiterter Rollback |
-| backup | Diagnose | Freigabe, Witness, Protokoll | Business- und Restore-Absicherung |
-| provisioning_kombi | Diagnose | Umsetzung, Freigabe, Witness | erweiterte Risiko- und Rollback-Schicht |
+| backup | Diagnose | Freigabe, Bestaetigung, Protokoll | Geschaefts- und Restore-Absicherung |
+| provisioning_kombi | Diagnose | Umsetzung, Freigabe, Bestaetigung | erweiterte Risiko- und Rollback-Schicht |
 | kubernetes | Diagnose | Rollback-/Resize-Checkliste, Protokoll | Clusterkritische Freigabe |
-| netzwerk | Diagnose | Gegenprobe, Freigabe, Witness | starke Freigabe und Gegenmessung |
-| storage | Diagnose | Freigabe, Witness, Protokoll | Compliance- und Restore-Schutz |
+| netzwerk | Diagnose | Gegenprobe, Freigabe, Bestaetigung | starke Freigabe und Gegenmessung |
+| storage | Diagnose | Freigabe, Bestaetigung, Protokoll | Compliance- und Restore-Schutz |
 
 ---
 
@@ -232,11 +232,11 @@ Praevention:
 |---|---|
 | 01 Hitzestau | Diagnose, Umsetzung, Protokoll, Praevention |
 | 02 RAM | Diagnose, Freigabe, Umsetzung, Protokoll |
-| 03 Backupfenster | Diagnose, Freigabe, Witness, Protokoll, Praevention |
-| 04 Provisioning RAM und Storage | Diagnose, Freigabe, Umsetzung, Witness, Protokoll |
-| 05 Kubernetes Pending und PVC | Diagnose, Freigabe, Rollback, Witness, Protokoll |
-| 06 Switch-Uplink und VLAN | Diagnose, Freigabe, Witness, Protokoll, Praevention |
-| 07 NAS oder NetApp | Diagnose, Freigabe, Witness, Protokoll, Praevention |
+| 03 Backupfenster | Diagnose, Freigabe, Bestaetigung, Protokoll, Praevention |
+| 04 Provisioning RAM und Storage | Diagnose, Freigabe, Umsetzung, Bestaetigung, Protokoll |
+| 05 Kubernetes Pending und PVC | Diagnose, Freigabe, Rollback, Bestaetigung, Protokoll |
+| 06 Switch-Uplink und VLAN | Diagnose, Freigabe, Bestaetigung, Protokoll, Praevention |
+| 07 NAS oder NetApp | Diagnose, Freigabe, Bestaetigung, Protokoll, Praevention |
 
 ---
 
@@ -245,8 +245,8 @@ Praevention:
 Diese Generatorlogik sollte spaeter nicht nur als Text existieren, sondern als feste Ableitungsregel:
 
 - aus `problemtyp`
-- aus `policy_klasse`
-- aus `witness_stufe`
+- aus `betriebsklasse`
+- aus `bestaetigungsstufe`
 - aus `risiko`
 - aus `offene_luecken`
 

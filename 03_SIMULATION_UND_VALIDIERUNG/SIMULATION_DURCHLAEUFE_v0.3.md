@@ -40,7 +40,7 @@ Es geht dabei nicht um eine reale technische Ausfuehrung, sondern um die Frage:
 
 ### Zusammenfassung
 
-Der Fall ist fuer GCA sehr gut geeignet, weil er Mustererkennung, Mehrwege-Denken und saubere Checklistenableitung verlangt, ohne sofort in komplexe Policy-Konflikte zu kippen.
+Der Fall ist fuer GCA sehr gut geeignet, weil er Mustererkennung, Mehrwege-Denken und saubere Checklistenableitung verlangt, ohne sofort in komplexe Regelkonflikte zu kippen.
 
 ### Persoenliche Einschaetzung
 
@@ -58,7 +58,7 @@ Das ist im Moment euer staerkster Demonstrationsfall. Er zeigt den kognitiven Ke
 3. Host-Kapazitaet, freie Slots und Maximalgrenzen abfragen
 4. Alternativen pruefen: VM-Verschiebung, Tuning, Erweiterung, neuer Host
 5. Empfehlung nur bei belastbarer Machbarkeit erzeugen
-6. Aenderung in Wartungsfenster und mit Human Approval ueberfuehren
+6. Aenderung in Wartungsfenster und mit menschlicher Freigabe ueberfuehren
 ```
 
 ### Ergebnis
@@ -112,7 +112,7 @@ Methodisch ein sehr guter Fall, weil er Diagnose, Betrieb, Risiko und Nachweis g
 3. Host-RAM und Storage-Backend zugleich auf Machbarkeit pruefen
 4. Thin-Provisioning-Risiko und Betriebsfenster bewerten
 5. abgestufte Handlung erzeugen statt Sofort-Erweiterung
-6. Freigabe, Witness und Rollback in die Massnahme integrieren
+6. Freigabe, Bestaetigung und Rollback in die Massnahme integrieren
 ```
 
 ### Ergebnis
@@ -139,7 +139,7 @@ Einer der wertvollsten neuen Faelle. Er ist nah an echter Admin-Arbeit und zwing
 3. PVC, PV und StorageClass-Verhalten gegen Scheduling-Probleme abgrenzen
 4. Konfigurationsfehler gegen echte Kapazitaetsgrenze trennen
 5. Rollback, Resize oder Scheduling-Korrektur als Optionen priorisieren
-6. Cluster-Aenderung nur nach Policy-Klasse und Human Approval empfehlen
+6. Cluster-Aenderung nur nach Betriebsklasse und menschlicher Freigabe empfehlen
 ```
 
 ### Ergebnis
@@ -192,8 +192,8 @@ Das ist ein ueberraschend starker Fall fuer euch. Er ist komplex genug, um nicht
 2. Einmaliges Wachstum gegen strukturelle Entwicklung trennen
 3. Expansion, Tiering, Aufraeumen und Retention-Anpassung gegeneinander pruefen
 4. Restore- und Compliance-Risiko gegen Schnellmassnahmen abwaegen
-5. Business-Kritikalitaet und Policy-Klasse festhalten
-6. nur freigegebene Storage-Aenderung mit Witness und Protokoll empfehlen
+5. Geschaeftskritikalitaet und Betriebsklasse festhalten
+6. nur freigegebene Storage-Aenderung mit Bestaetigung und Protokoll empfehlen
 ```
 
 ### Ergebnis
@@ -220,7 +220,7 @@ Sehr starker Realitaetstest. Wenn GCA hier spaeter wirklich gut wird, ist das ei
 | 04 Provisioning / RAM und Storage | teilweise | sehr realistischer Kombifall |
 | 05 Kubernetes / Pending und PVC | teilweise | zukunftsstark, aber formalisierungsbeduerftig |
 | 06 Netzwerk / Switch-Uplink und VLAN | funktioniert | sehr guter Mehrwege-Diagnosefall |
-| 07 NAS oder NetApp / Snapshot-Wachstum | teilweise | harter Realitaetstest fuer Policy und Restore |
+| 07 NAS oder NetApp / Snapshot-Wachstum | teilweise | harter Realitaetstest fuer Regelgrenzen und Restore |
 
 ---
 
@@ -236,10 +236,10 @@ Der aktuelle GCA-Stand ist nicht nur fuer drei Schoenwetterfaelle brauchbar. Er 
 
 Die groessten Luecken liegen nicht mehr im reinen Problemverstehen, sondern in der harten Formalisierung von:
 
-- Evidence
-- Witness
-- Policy-Klassen
-- Human Approval
+- Evidenz
+- Bestaetigung
+- Betriebsklassen
+- menschliche Freigabe
 - strukturierter Machbarkeitspruefung
 
 ---
@@ -255,5 +255,5 @@ Das ist ein gutes Ergebnis, aber auch ein ehrliches. Die Staerke liegt klar im s
 Wenn ihr die naechste Reifestufe erreichen wollt, wuerde ich nicht als Erstes neue Visionen erfinden, sondern drei Dinge bauen:
 
 1. ein formales Loesungsknoten-Schema
-2. eine Policy- und Approval-Matrix
-3. standardisierte Evidence- und Witness-Felder pro Falltyp
+2. eine Regel- und Freigabematrix
+3. standardisierte Evidenz- und Bestaetigungsfelder pro Falltyp

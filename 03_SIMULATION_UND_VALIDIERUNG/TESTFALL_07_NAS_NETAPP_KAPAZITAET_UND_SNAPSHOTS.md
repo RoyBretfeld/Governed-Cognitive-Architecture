@@ -59,8 +59,8 @@ Moegliche tragfaehige Richtung:
 [ ] Restore- und Compliance-Auswirkungen geprueft
 [ ] Expansion, Tiering, Archivierung oder Migration verglichen
 [ ] Risiko einer Schnellloeschung bewertet
-[ ] Policy-Klasse und Business-Kritikalitaet festgehalten
-[ ] Human Approval eingeholt
-[ ] Witness durch Monitoring oder Storage-Bericht abgelegt
+[ ] Betriebsklasse und Geschaeftskritikalitaet festgehalten
+[ ] menschliche Freigabe eingeholt
+[ ] Bestaetigung durch Monitoring oder Storage-Bericht abgelegt
 [ ] Protokoll und Praeventionsplan erstellt
 ```

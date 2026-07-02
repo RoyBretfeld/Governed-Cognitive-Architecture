@@ -43,7 +43,7 @@ Das System kennt weder die konkrete spaetere Ursache noch ob Scheduling, Storage
 
 ## Erwarteter Loesungsknoten
 
-Das Framework soll nicht vorschnell "mehr Nodes" oder "mehr Ressourcen" empfehlen, sondern zunaechst Scheduling-, Storage- und Policy-Konflikte trennen.
+Das Framework soll nicht vorschnell "mehr Nodes" oder "mehr Ressourcen" empfehlen, sondern zunaechst Scheduling-, Storage- und Regelkonflikte trennen.
 
 Moegliche tragfaehige Richtung:
 
@@ -63,8 +63,8 @@ Moegliche tragfaehige Richtung:
 [ ] PVC-, PV- und StorageClass-Status geprueft
 [ ] Rollout-Historie und letzte Aenderungen geprueft
 [ ] rollbackfaehige Option identifiziert
-[ ] produktive Cluster-Aenderung als Policy-Klasse bewertet
-[ ] Human Approval fuer P2 oder P3 eingeholt
-[ ] Witness fuer Durchfuehrung und Stabilisierung abgelegt
+[ ] produktive Cluster-Aenderung als Betriebsklasse bewertet
+[ ] menschliche Freigabe fuer P2 oder P3 eingeholt
+[ ] Bestaetigung fuer Durchfuehrung und Stabilisierung abgelegt
 [ ] Protokoll und Praeventionshinweis erstellt
 ```

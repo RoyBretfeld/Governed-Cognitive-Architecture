@@ -46,7 +46,7 @@ Moegliche tragfaehige Richtung:
 
 ```text
 1. Fehlerzaehler, Uplink-Auslastung und VLAN-Betroffenheit bewerten
-2. physische Ursachen gegen Trunk- oder Policy-Fehler abgrenzen
+2. physische Ursachen gegen Trunk- oder Regelfehler abgrenzen
 3. risikoarme Gegenprobe oder Wartungswechsel planen
 4. produktive Netzwerkaenderungen nur mit Freigabe durchfuehren
 ```
@@ -61,7 +61,7 @@ Moegliche tragfaehige Richtung:
 [ ] Trunk- und Allowed-VLAN-Konfiguration geprueft
 [ ] STP- oder Loop-Hinweise geprueft
 [ ] risikoarme Gegenprobe oder Wartungsplan erstellt
-[ ] Human Approval fuer produktive Umschaltung eingeholt
-[ ] Witness durch Monitoring und Gegenmessung abgelegt
+[ ] menschliche Freigabe fuer produktive Umschaltung eingeholt
+[ ] Bestaetigung durch Monitoring und Gegenmessung abgelegt
 [ ] Protokoll und Praeventionsmassnahme erstellt
 ```

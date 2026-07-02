@@ -62,6 +62,6 @@ Moegliche tragfaehige Richtung:
 [ ] Thin-Provisioning-Risiko bewertet
 [ ] Cleanup oder Archivierung als Alternative geprueft
 [ ] Wartungsfenster und Rollback definiert
-[ ] Human Approval eingeholt
-[ ] Witness und Protokoll abgelegt
+[ ] menschliche Freigabe eingeholt
+[ ] Bestaetigung und Protokoll abgelegt
 ```

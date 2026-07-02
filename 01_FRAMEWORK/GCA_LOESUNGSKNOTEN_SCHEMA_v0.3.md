@@ -2,7 +2,7 @@
 
 ## Zweck
 
-Dieses Schema definiert den formalen Aufbau eines Loesungsknotens, sodass Diagnose, Evidence, Policy, Checkliste, Witness und Protokoll spaeter einheitlich gespeichert und wiederverwendet werden koennen.
+Dieses Schema definiert den formalen Aufbau eines Loesungsknotens, sodass Diagnose, Evidenz, Regelgrenze, Checkliste, Bestaetigung und Protokoll spaeter einheitlich gespeichert und wiederverwendet werden koennen.
 
 ---
 
@@ -25,12 +25,12 @@ Dieses Schema definiert den formalen Aufbau eines Loesungsknotens, sodass Diagno
 | `gepruefte_wege` | moegliche Loesungswege |
 | `verworfene_wege` | bewusst abgelehnte Wege mit Grund |
 | `tragfaehige_loesung` | priorisierte Loesungsrichtung |
-| `evidence` | belastbare Nachweise |
+| `evidenz` | belastbare Nachweise |
 | `offene_luecken` | fehlende Daten oder Unsicherheiten |
 | `risiko` | Betriebs-, Daten- oder Sicherheitsrisiko |
-| `policy_klasse` | P0 bis P3 |
-| `approval_stufe` | A0 bis A3 |
-| `witness_stufe` | W0 bis W3 |
+| `betriebsklasse` | P0 bis P3 |
+| `freigabestufe` | A0 bis A3 |
+| `bestaetigungsstufe` | W0 bis W3 |
 | `checklisten_typen` | welche Checklisten entstehen sollen |
 | `rollback` | Rueckfallstrategie oder Abbruchpunkt |
 | `protokollpflicht` | ja oder erweitert |
@@ -56,9 +56,9 @@ schlecht: Rack-Luftstrom ist kaputt
 
 Diese Felder bilden die Mehrwege-Logik und das negative Erfahrungswissen ab.
 
-### 3.3 Evidence
+### 3.3 Evidenz
 
-Evidence soll nach Moeglichkeit in Typen gegliedert sein:
+Evidenz soll nach Moeglichkeit in Typen gegliedert sein:
 
 - Messwerte
 - Logs
@@ -78,7 +78,7 @@ Ein Loesungsknoten erzeugt nicht automatisch nur eine Checkliste. Er kann mehrer
 - Diagnose-Checkliste
 - Umsetzungs-Checkliste
 - Freigabe-Checkliste
-- Witness-Checkliste
+- Bestaetigungs-Checkliste
 - Protokoll-Checkliste
 - Praeventions-Checkliste
 
@@ -104,16 +104,16 @@ verworfene_wege:
   - Hardwaretausch sofort
 tragfaehige_loesung:
   - Luftstrom pruefen und Hindernisse entfernen
-evidence:
+evidenz:
   - Temperaturreihe vorher
   - Sichtpruefung Rack
 offene_luecken:
   - keine Foto-Dokumentation vorhanden
 risiko:
   - mittel
-policy_klasse: P2
-approval_stufe: A2
-witness_stufe: W2
+betriebsklasse: P2
+freigabestufe: A2
+bestaetigungsstufe: W2
 checklisten_typen:
   - diagnose
   - umsetzung
@@ -132,7 +132,7 @@ praeventionshinweis:
 
 Aus dem Schema folgen spaeter automatische oder halbautomatische Artefakte:
 
-- `policy_klasse` bestimmt Approval und Witness
+- `betriebsklasse` bestimmt Freigabe und Bestaetigung
 - `problemtyp` bestimmt die Grundbausteine der Checkliste
 - `risiko` bestimmt Eskalationstiefe
 - `offene_luecken` erzeugt Datennachforderungen
@@ -160,7 +160,7 @@ Ein Loesungsknoten gilt erst als praxisnah, wenn aus ihm mindestens eine explizi
 
 Regel:
 
-> Kein P2- oder P3-Loesungsknoten ohne Umsetzungs-, Witness- und Protokoll-Checkliste.
+> Kein P2- oder P3-Loesungsknoten ohne Umsetzungs-, Bestaetigungs- und Protokoll-Checkliste.
 
 ---
 

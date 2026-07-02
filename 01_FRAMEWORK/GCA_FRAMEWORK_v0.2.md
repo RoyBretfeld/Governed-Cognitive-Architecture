@@ -13,8 +13,8 @@ Diese Fassung ersetzt nicht den kanonischen Text in `00_MASTER/GCA_KANON_v1.0.md
 v0.2 schliesst die wichtigsten Luecken zwischen konzeptioneller Architektur und belastbarer Problembehandlung:
 
 - Evidenz wird Pflichtbestandteil jeder tragfaehigen Loesung.
-- Witness und Protokoll werden von Beginn an mitgedacht.
-- Policy-Grenzen werden vor der Umsetzung explizit gemacht.
+- Bestaetigung und Protokoll werden von Beginn an mitgedacht.
+- Regelgrenzen werden vor der Umsetzung explizit gemacht.
 - autonome Pruefprozesse werden erlaubt, autonome Produktivaenderungen nicht.
 - die AGI-nahe Forschungsrichtung wird als begrenzte Architekturthese eingeordnet, nicht als Vollversprechen.
 
@@ -29,17 +29,17 @@ Beobachtung
 -> Problemdefinition
 -> mehrere Denkwege
 -> Evidenz sammeln
--> Wege gegen Daten und Policy pruefen
+-> Wege gegen Daten und Regelgrenzen pruefen
 -> DEAD_ENDS oder Loesungsknoten erzeugen
 -> Checkliste ableiten
--> Human Approval einholen
+-> menschliche Freigabe einholen
 -> Umsetzung protokollieren
 -> Wissen und Praevention aktualisieren
 ```
 
 Neue harte Regel:
 
-> Kein Loesungsknoten ohne Evidenzlage. Keine Umsetzung ohne Policy-Pruefung. Keine kritische Aenderung ohne Human Approval.
+> Kein Loesungsknoten ohne Evidenzlage. Keine Umsetzung ohne Regelpruefung. Keine kritische Aenderung ohne menschliche Freigabe.
 
 ---
 
@@ -51,10 +51,10 @@ Neue harte Regel:
 | HYPOTHESIS | gepruefter, aber noch nicht freigegebener Denkweg |
 | DEAD_ENDS | verworfene oder gesperrte Wege mit Begruendung |
 | Loesungsknoten | tragfaehiger Weg mit Evidenz, Risiken, Checkliste und Status |
-| Evidence | Messwerte, Logs, Kontextdaten, Vorher-Nachher-Nachweise |
-| Witness | bestaetigende Instanz fuer Durchfuehrung oder Befund |
-| Policy-Grenze | Regel, was autonom vorbereitet, aber nicht autonom ausgefuehrt werden darf |
-| Human Approval | explizite menschliche Freigabe vor produktiver Aenderung |
+| Evidenz | Messwerte, Logs, Kontextdaten, Vorher-Nachher-Nachweise |
+| Bestaetigung | bestaetigende Instanz fuer Durchfuehrung oder Befund |
+| Regelgrenze | Regel, was autonom vorbereitet, aber nicht autonom ausgefuehrt werden darf |
+| menschliche Freigabe | explizite menschliche Freigabe vor produktiver Aenderung |
 
 ---
 
@@ -69,13 +69,13 @@ Beobachtete Symptome
 Gepruefte Wege
 Verworfene Wege
 Tragfaehige Loesung
-Evidence
+Evidenz
 Offene Luecken
 Risiko
-Policy-Klasse
-Human-Approval-Status
+Betriebsklasse
+Freigabestatus
 Checkliste
-Witness
+Bestaetigung
 Protokollstatus
 Praeventionshinweis
 ```
@@ -86,11 +86,11 @@ Neue Regel:
 
 ---
 
-## 5. Evidence und Witness
+## 5. Evidenz und Bestaetigung
 
-### 5.1 Evidence
+### 5.1 Evidenz
 
-Evidence meint nicht nur "es klingt plausibel", sondern belastbare Nachweise:
+Evidenz meint nicht nur "es klingt plausibel", sondern belastbare Nachweise:
 
 - Messwerte
 - Logs
@@ -100,9 +100,9 @@ Evidence meint nicht nur "es klingt plausibel", sondern belastbare Nachweise:
 - Vorher-Nachher-Vergleich
 - bekannte Grenzen der Datenlage
 
-### 5.2 Witness
+### 5.2 Bestaetigung
 
-Witness ist die zweite Nachvollziehbarkeitsschicht. Ein Witness kann sein:
+Bestaetigung ist die zweite Nachvollziehbarkeitsschicht. Eine Bestaetigung kann sein:
 
 - ein Mensch
 - ein Monitoring-System
@@ -110,13 +110,13 @@ Witness ist die zweite Nachvollziehbarkeitsschicht. Ein Witness kann sein:
 - ein Restore-Test
 - ein zweiter technischer Nachweis
 
-Witness bestaetigt nicht die Theorie, sondern den realen Befund oder die reale Durchfuehrung.
+Bestaetigung bestaetigt nicht die Theorie, sondern den realen Befund oder die reale Durchfuehrung.
 
 ---
 
-## 6. Policy-Grenzen
+## 6. Regelgrenzen
 
-v0.2 fuehrt vier praktische Policy-Klassen ein:
+v0.2 fuehrt vier praktische Betriebsklassen ein:
 
 | Klasse | Bedeutung | Autonom erlaubt |
 |---|---|---|
@@ -128,8 +128,8 @@ v0.2 fuehrt vier praktische Policy-Klassen ein:
 Regeln:
 
 - P0 und P1 duerfen autonom vorbereitet werden.
-- P2 braucht Human Approval, Checkliste und Witness.
-- P3 braucht Human Approval, erweiterte Begruendung, Witness und gesondertes Protokoll.
+- P2 braucht menschliche Freigabe, Checkliste und Bestaetigung.
+- P3 braucht menschliche Freigabe, erweiterte Begruendung, Bestaetigung und gesondertes Protokoll.
 - unklare Klassifikation wird automatisch hoeher eingestuft.
 
 ---
@@ -165,7 +165,7 @@ Nicht autonom erlaubt:
 
 Neue Regel:
 
-> Bei Musterdiagnosen mit physischer Ursache muessen Vorher-Nachher-Messwerte und Sichtpruefung als Evidence gespeichert werden.
+> Bei Musterdiagnosen mit physischer Ursache muessen Vorher-Nachher-Messwerte und Sichtpruefung als Evidenz gespeichert werden.
 
 ### 8.2 RAM / Kapazitaetsgrenze
 
@@ -188,11 +188,11 @@ AEGIS wird in v0.2 nicht als magische Zusatzschicht behandelt, sondern als Siche
 | GCA-Bedarf | AEGIS-Rolle |
 |---|---|
 | Governance-Grenzen | erzwingt, dass aus Analyse nicht stillschweigend Aktion wird |
-| Evidence | sammelt, signiert oder bewahrt belastbare Nachweise |
-| Witness | bestaetigt Durchfuehrung, Monitoring oder Gegenkontrolle |
-| Policy-Grenzen | blockiert unzulaessige Klassen von Aenderungen |
+| Evidenz | sammelt, signiert oder bewahrt belastbare Nachweise |
+| Bestaetigung | bestaetigt Durchfuehrung, Monitoring oder Gegenkontrolle |
+| Regelgrenzen | blockiert unzulaessige Klassen von Aenderungen |
 | autonome Pruefprozesse | erlaubt Hintergrundanalyse bei gesperrter Produktivwirkung |
-| Human Approval | bildet den echten Freigabepunkt fuer P2 und P3 |
+| menschliche Freigabe | bildet den echten Freigabepunkt fuer P2 und P3 |
 
 Praktische Ableitung:
 
@@ -236,7 +236,7 @@ Die Wissenskaskade ist der Brueckenmechanismus zwischen Einzelerlebnis und dauer
 
 ### 10.5 Loesungsknoten
 
-Loesungsknoten sind die wiederverwendbaren, begruendeten Ausgaenge der Architektur. Sie verbinden Problem, Begruendung, Evidence, Checkliste, Witness und Protokoll.
+Loesungsknoten sind die wiederverwendbaren, begruendeten Ausgaenge der Architektur. Sie verbinden Problem, Begruendung, Evidenz, Checkliste, Bestaetigung und Protokoll.
 
 ### 10.6 Autonome Problemloesung mit Eskalationsgrenze
 
@@ -258,7 +258,7 @@ v0.2 macht das Framework nicht groesser, sondern sauberer:
 
 - mehr Datenpflicht statt mehr Schlagworte
 - mehr Freigabelogik statt mehr Vision
-- mehr Witness und Protokoll statt mehr Metapher
+- mehr Bestaetigung und Protokoll statt mehr Metapher
 - klarere AGI-Einordnung ohne Ueberversprechen
 
 Der naechste sinnvolle Schritt nach v0.2 ist nicht neue Terminologie, sondern wiederholbare Simulation mit denselben Regeln auf mehr reale Faelle.

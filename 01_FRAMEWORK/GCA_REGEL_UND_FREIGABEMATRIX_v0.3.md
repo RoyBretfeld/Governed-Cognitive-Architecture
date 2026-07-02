@@ -1,8 +1,8 @@
-# GCA Policy und Approval Matrix v0.3
+# GCA Regel- und Freigabematrix v0.3
 
 ## Zweck
 
-Dieses Dokument formalisiert, wann GCA nur analysieren darf, wann ein Vorschlag entstehen darf und wann zwingend menschliche Freigabe, Witness und Protokoll notwendig sind.
+Dieses Dokument formalisiert, wann GCA nur analysieren darf, wann ein Vorschlag entstehen darf und wann zwingend menschliche Freigabe, Bestaetigung und Protokoll notwendig sind.
 
 Die Matrix ist bewusst praktisch gehalten. Sie soll nicht Theorie vermehren, sondern Fehlgrenzen im Betrieb sichtbar machen.
 
@@ -10,13 +10,13 @@ Die Matrix ist bewusst praktisch gehalten. Sie soll nicht Theorie vermehren, son
 
 ## 1. Leitregel
 
-> Je hoeher Betriebswirkung, Sicherheitswirkung oder Unsicherheit, desto hoeher die Policy-Klasse und desto haerter die Freigabepflicht.
+> Je hoeher Betriebswirkung, Sicherheitswirkung oder Unsicherheit, desto hoeher die Betriebsklasse und desto haerter die Freigabepflicht.
 
 ---
 
-## 2. Policy-Klassen
+## 2. Betriebsklassen
 
-| Klasse | Typischer Charakter | Autonom erlaubt | Human Approval | Witness | Protokoll |
+| Klasse | Typischer Charakter | Autonom erlaubt | menschliche Freigabe | Bestaetigung | Protokoll |
 |---|---|---|---|---|---|
 | P0 | reine Analyse, Dokumentation, Simulation | ja | nein | optional | optional |
 | P1 | vorbereitender Vorschlag ohne direkte Produktivwirkung | ja | nein fuer Vorschlag, ja fuer Umsetzung | optional | empfohlen |
@@ -29,12 +29,12 @@ Die Matrix ist bewusst praktisch gehalten. Sie soll nicht Theorie vermehren, son
 
 Ein Fall wird mindestens um eine Stufe hoeher eingestuft, wenn einer dieser Punkte zutrifft:
 
-- unvollstaendige oder widerspruechliche Evidence
+- unvollstaendige oder widerspruechliche Evidenz
 - keine sichere Rollback-Moeglichkeit
 - mehrere Systeme oder Mandanten betroffen
 - Datenverlust oder Compliance-Risiko moeglich
 - Produktivsystem, Core-Netzwerk, zentrales Storage oder Clustersteuerung betroffen
-- Sicherheitsregel, Policy oder Schutzgrenze beruehrt
+- Sicherheitsregel, Regelgrenze oder Schutzgrenze beruehrt
 
 Neue Regel:
 
@@ -42,9 +42,9 @@ Neue Regel:
 
 ---
 
-## 4. Approval-Stufen
+## 4. Freigabestufen
 
-| Approval-Stufe | Bedeutung | Wann noetig |
+| Freigabestufe | Bedeutung | Wann noetig |
 |---|---|---|
 | A0 | keine Freigabe notwendig | P0 |
 | A1 | fachliche Kenntnisnahme oder Plausibilisierung | P1 bei spaeterer Uebergabe |
@@ -64,35 +64,35 @@ Neue Regel:
 ### P1
 
 - Problemdefinition
-- Evidence-Grundlage
+- Evidenzgrundlage
 - Alternativenvergleich
 - vorgeschlagene Checkliste
 - Hinweis, dass noch keine Umsetzung freigegeben ist
 
 ### P2
 
-- vollstaendige Evidence fuer den konkreten Eingriff
+- vollstaendige Evidenz fuer den konkreten Eingriff
 - Risikoabschaetzung
 - Rollback-Plan
-- Human Approval A2
-- Witness fuer Durchfuehrung oder Stabilisierung
+- menschliche Freigabe A2
+- Bestaetigung fuer Durchfuehrung oder Stabilisierung
 - Protokollpflicht
 
 ### P3
 
-- vollstaendige Evidence plus Business-Kritikalitaet
+- vollstaendige Evidenz plus Geschaeftskritikalitaet
 - Risiko- und Nebenwirkungsanalyse
 - Rollback oder Ersatzverfahren
-- Human Approval A3
-- starker Witness
+- menschliche Freigabe A3
+- starke Bestaetigung
 - erweitertes Protokoll
 - Eskalationsweg bei Abbruch oder Unsicherheit
 
 ---
 
-## 6. Witness-Stufen
+## 6. Bestaetigungsstufen
 
-| Witness-Stufe | Bedeutung | Beispiele |
+| Bestaetigungsstufe | Bedeutung | Beispiele |
 |---|---|---|
 | W0 | nicht erforderlich | reine Denkarbeit |
 | W1 | einfacher bestaetigender Nachweis | Monitoring-Screenshot, zweiter Log, Kontrollmessung |
@@ -105,14 +105,14 @@ Neue Regel:
 
 ```text
 Problem erkannt
--> Evidence ausreichend?
+-> Evidenz ausreichend?
    -> nein: Eskalation oder Datennachforderung
-   -> ja: Policy-Klasse bestimmen
+   -> ja: Betriebsklasse bestimmen
 -> P0 oder P1?
    -> Vorschlag und Checkliste erzeugen
 -> P2 oder P3?
-   -> Human Approval verlangen
-   -> Witness-Anforderung setzen
+   -> menschliche Freigabe verlangen
+   -> Bestaetigungsanforderung setzen
    -> Rollback und Protokollpflicht aktivieren
 -> Umsetzung nur nach Freigabe
 ```
@@ -133,9 +133,9 @@ Problem erkannt
 
 ---
 
-## 9. Approval-Matrix nach Aktionstyp
+## 9. Freigabematrix nach Aktionstyp
 
-| Aktionstyp | Standardklasse | Approval | Witness | Hinweis |
+| Aktionstyp | Standardklasse | Freigabe | Bestaetigung | Hinweis |
 |---|---|---|---|---|
 | Analyse, Vergleich, Simulation | P0 | A0 | W0 | kein Produktiveingriff |
 | Handlungsvorschlag oder Wartungsplan | P1 | A1 | W0 bis W1 | noch keine Umsetzung |
@@ -144,7 +144,7 @@ Problem erkannt
 | Backupfenster aendern | P2 bis P3 | A2 oder A3 | W2 | Restore und Lastwirkung pruefen |
 | PVC, Cluster oder Scheduling anpassen | P2 bis P3 | A2 oder A3 | W2 | Rollbackfaehigkeit wichtig |
 | Uplink umschalten oder VLAN-Produktivpfad aendern | P3 | A3 | W3 | Netzwerkbreite Wirkung |
-| Snapshot-Retention oder Storage-Policy aendern | P3 | A3 | W3 | Restore- und Compliance-Risiko |
+| Snapshot-Retention oder Storage-Regel aendern | P3 | A3 | W3 | Restore- und Compliance-Risiko |
 
 ---
 
@@ -152,9 +152,9 @@ Problem erkannt
 
 Die Matrix bedeutet fuer spaetere GCA-Logik:
 
-- kein Loesungsknoten ohne Policy-Klasse
-- keine Checkliste ohne benoetigte Approval-Stufe
-- kein Protokoll ohne Witness-Anforderung
+- kein Loesungsknoten ohne Betriebsklasse
+- keine Checkliste ohne benoetigte Freigabestufe
+- kein Protokoll ohne Bestaetigungsanforderung
 - kein "teilweise" bestandener Simulationsfall ohne sichtbare Freigabelogik
 
 ---
